@@ -1,11 +1,12 @@
 const imageUpload = document.getElementById('imageUpload')
 
 Promise.all([
-    faceapi.nets.tinyFaceDetector.loadFromUri('https://www.sample.com/face_recognition/final/models'),
-    faceapi.nets.faceLandmark68Net.loadFromUri('https://www.sample.com/face_recognition/final/models'),
-    faceapi.nets.faceRecognitionNet.loadFromUri('https://www.sample.com/face_recognition/final/models'),
-    faceapi.nets.ssdMobilenetv1.loadFromUri('https://www.sample.com/face_recognition/final/models')
-]).then(start);
+    faceapi.nets.tinyFaceDetector.loadFromUri('./models'),
+    faceapi.nets.faceLandmark68Net.loadFromUri('./models'),
+    faceapi.nets.faceRecognitionNet.loadFromUri('./models'),
+    faceapi.nets.ssdMobilenetv1.loadFromUri('./models')
+]).then(start)
+
 
 async function start() {
     const container = document.createElement('div')
